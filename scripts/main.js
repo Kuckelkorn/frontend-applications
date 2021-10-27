@@ -23,8 +23,8 @@ rawJSON
         changeKey("Wat wilde je later worden als je groot bent, maar nu toen je zelf 8 jaar was.", "childProfession", item)
         changeKey("Kaas is ook een zoogdier?", "cheese", item)
         changeKey("Als je later een auto zou kopen, van welk merk zou deze dan zijn?", "car", item)
-        // eyecolorArr.push(item.eyecolor.toLowerCase())
-        // eyecolorArr.sort()
+        eyecolorArr.push(item.eyecolor.toLowerCase())
+        eyecolorArr.sort()
         console.log(item);
     }))
 
