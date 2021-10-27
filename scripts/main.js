@@ -1,4 +1,4 @@
-const eyecolorArr = []
+const clothesArr = []
 
 function changeKey(oldKey, newKey, obj) {
     delete Object.assign(obj, { [newKey]: obj[oldKey] })[oldKey];
@@ -12,7 +12,7 @@ rawJSON
         changeKey("Wat is je oogkleur?", "eyecolor", item)
         changeKey("Wat is je favoriete soort huisdier?", "favAnimal", item)
         changeKey("Wat is je favoriete windrichting?", "favDirection", item)
-        changeKey("Op een schaal van 1 tot 10, hoeveel zin heb je in de Tech Track?", "mood", item)
+        changeKey("Op een schaal van 1 tot 10, hoeveel zin heb je in de Tech Track?", "excitement", item)
         changeKey("Kies zelf of je deze vraag beantwoord.", "ownChoice", item)
         changeKey("Wat is je favoriete datum?", "favDate", item)
         changeKey("Wat is je favoriete datum, maar nu in tekst!", "writtenDate", item)
@@ -23,9 +23,13 @@ rawJSON
         changeKey("Wat wilde je later worden als je groot bent, maar nu toen je zelf 8 jaar was.", "childProfession", item)
         changeKey("Kaas is ook een zoogdier?", "cheese", item)
         changeKey("Als je later een auto zou kopen, van welk merk zou deze dan zijn?", "car", item)
-        eyecolorArr.push(item.eyecolor.toLowerCase())
-        eyecolorArr.sort()
-        console.log(item);
+        item.clothesColor = item.clothesColor.split(", ")
+        item.eyecolor = item.eyecolor.toLowerCase();
+        return item
+    }))
+    .then(item => item.map((obj) => {
+        clothesArr.push(obj.clothesColor)
+        clothesArr.flat()
     }))
 
-// console.log(eyecolorArr)
+console.log(clothesArr);
