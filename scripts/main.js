@@ -5,7 +5,7 @@ const rawJSON = fetch("./data.json")
 rawJSON
     .then(response => response.json())
     .then(json => {
-        const objects = []
+        const items = []
         const clothesArr = []
         const eyeColors = []
         json.map((obj) => {
@@ -23,21 +23,21 @@ rawJSON
             changeKey("Wat wilde je later worden als je groot bent, maar nu toen je zelf 8 jaar was.", "childProfession", obj)
             changeKey("Kaas is ook een zoogdier?", "cheese", obj)
             changeKey("Als je later een auto zou kopen, van welk merk zou deze dan zijn?", "car", obj)
-            console.log(toString(obj));
-            console.log(valsToLowercase(obj));
-            // console.log(data)
-            objects.push(obj);
-            // obj.clothesColor = obj.clothesColor.split(", ")
-            // obj.eyecolor = obj.eyecolor.toLowerCase()
-            // clothesArr.push(obj.clothesColor);
-            // eyeColors.push(obj.eyecolor);
+            toString(obj)
+            LowercaseAnswers(obj)
+            checkEmpty(obj)
+            obj.favDate = changeDate(obj.favDate)
+            obj.clothesColor = obj.clothesColor.split(", ")
+            items.push(obj);
         })
-        return objects
+        return items;
     })
-    .then(objects => console.log(objects))
+    .then(items => {
+        console.table(items)
+        console.log(items)
+    })
 
 // FUNCTIONS FOR CLEANING UP JSON DATA
-// Counting Duplicates, doesn't work yet
 function countDups(arr) {
     arr.forEach(x => {
         duplicates[x] = (duplicates[x] || 0) + 1;
@@ -50,6 +50,7 @@ function changeKey(oldKey, newKey, obj) {
     delete Object.assign(obj, { [newKey]: obj[oldKey] })[oldKey];
 }
 
+// Changing all answers to strings
 function toString(obj) {
     Object.keys(obj).forEach(key => {
         if (typeof obj[key] === 'object') {
@@ -58,14 +59,37 @@ function toString(obj) {
         obj[key] = "" + obj[key]
     });
     return obj;
-
 }
 
-function valsToLowercase(object) {
-    Object.keys(object).reduce((n, k) => { (n[k] = object[k].toLowerCase(), n), {} }
-    )
-    return object
+// changing all answers to a lowercase answer
+function LowercaseAnswers(obj) {
+    Object.keys(obj).forEach(key => {
+        obj[key] = obj[key].toLowerCase();
+    });
+    return obj
 }
 
+function checkEmpty(obj) {
+    Object.keys(obj).forEach(key => {
+        if (obj[key] < 1) {
+            // only delete this key value pair
+            delete obj[key]
+        }
+        return obj;
+    });
+}
+
+function changeDate(string) {
+    const arr = string.split("/")
+    string = new Date(arr[2] + "-" + arr[1] + "-" + arr[0])
+    return string
+}
+
+// Delete object when a key is not there
+// check for each object if they have enough values
+// if they dont remove it
+function checkValues(obj) {
+    console.log(Object.values(obj).length)
+}
 
 
