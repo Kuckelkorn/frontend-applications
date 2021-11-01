@@ -25,22 +25,22 @@ rawJSON
       obj.clothesColor = obj.clothesColor.split(", ")
       return items;
     })
-    delObject(items)
-
+    const data = delObject(items)
+    return data
   })
-  .then(items => {
-    console.table(items)
-    console.log(items)
+  .then((data) => {
+    console.table(data)
+    console.log(data)
   })
 
 // FUNCTIONS FOR CLEANING UP JSON DATA
-function countDups(arr) {
-  const duplicates = {}
-  arr.forEach(x => {
-    duplicates[x] = (duplicates[x] || 0) + 1
-  })
-  return duplicates
-}
+// function countDups(arr) {
+//   const duplicates = {}
+//   arr.forEach(x => {
+//     duplicates[x] = (duplicates[x] || 0) + 1
+//   })
+//   return duplicates
+// }
 
 // Changing the key name
 function changeKey(oldKey, newKey, obj) {
@@ -85,7 +85,6 @@ function delObject(arr){
   arr  = arr.filter( 
     obj => Object.values(obj).length > 13
   )
-  console.log(arr)
   return arr
 }
 
