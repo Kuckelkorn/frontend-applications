@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Functional programming repo for Information Design tech track",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,11 +17,5 @@
   "bugs": {
     "url": "https://github.com/Kuckelkorn/FunctionalProgrammingTT/issues"
   },
-  "homepage": "https://github.com/Kuckelkorn/FunctionalProgrammingTT#readme",
-  "dependencies": {
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "node-fetch": "^3.0.0",
-    "nodemon": "^2.0.14"
-  }
+  "homepage": "https://github.com/Kuckelkorn/FunctionalProgrammingTT#readme"
 }
