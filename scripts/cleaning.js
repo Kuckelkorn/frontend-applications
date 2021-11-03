@@ -1,4 +1,4 @@
-const rawJSON = fetch("./data.json")
+const rawJSON = fetch("./assets/data.json")
 
 rawJSON
   .then(response => response.json())
