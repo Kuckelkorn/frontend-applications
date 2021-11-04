@@ -3,7 +3,6 @@ import recipeAPI from "./helpers/recipeAPI.js";
 
 function findRecipes () {
   const ingredient = document.querySelector("#ingredient").value
-  console.log(ingredient);
   const recipe = fetch(recipeAPI.endpoint + recipeAPI.apiKey + "&query=" + ingredient + "&number=4")
   recipe
     .then(response => response.json())
@@ -18,7 +17,6 @@ function findRecipes () {
         div[i].remove()
       }
       data.map((obj) => {
-        console.log(obj)
         const element = document.createElement("div")
         element.addEventListener("click", findSimiliar)
         element.id = obj.id
