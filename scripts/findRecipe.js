@@ -5,7 +5,6 @@ function findRecipes () {
   const ingredient = document.querySelector("#ingredient").value
   console.log(ingredient);
   const recipe = fetch(recipeAPI.endpoint + recipeAPI.apiKey + "&query=" + ingredient + "&number=4")
-
   recipe
     .then(response => response.json())
     .then(data => {
