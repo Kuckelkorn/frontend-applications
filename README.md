@@ -30,8 +30,17 @@ export default recipeAPI
 
 the code above let's you write down your credentials and the endpoint you want to use. The specific endpoint here is to look up recipes with a word in it. The endpoint here isn't fully complete the rest is already written down in `findRecipe.js`
 
-the first part of the endpoint for finding similar recipes is:
-`endpoint: "https://api.spoonacular.com/recipes/"`
+The piece of code for finding similar recipes is:
+
+```javascript
+const substituteAPI = {
+  endpoint: "https://api.spoonacular.com/recipes/",
+  apiKey: <YOUR API KEY>
+}
+
+export default substituteAPI
+```
+
 
 ## License
 
