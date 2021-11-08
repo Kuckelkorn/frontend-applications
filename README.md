@@ -1,4 +1,4 @@
-# Functional Programming
+# Frontend Data
 
 Functional programming repo for Information Design tech track
 author: [Remco Kuckelkorn](https://github.com/Kuckelkorn)
@@ -40,7 +40,6 @@ const substituteAPI = {
 
 export default substituteAPI
 ```
-
 
 ## License
 
