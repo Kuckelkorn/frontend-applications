@@ -1,25 +1,24 @@
 {
-  "name": "frontend-data",
+  "name": "svelte-app",
   "version": "1.0.0",
-  "description": "Frontend Data repo for Information Design tech track",
-  "main": "index.js",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://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@github.com/Kuckelkorn/frontend-data.git"
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kuckelkorn/frontend-data/issues"
-  },
-  "homepage": "https://github.com/Kuckelkorn/frontend-data#readme",
   "dependencies": {
     "d3": "^7.1.1",
-    "svelte": "^3.44.1"
+    "sirv-cli": "^1.0.0"
   }
 }
