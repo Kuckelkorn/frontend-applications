@@ -1,4 +1,5 @@
-import findSimiliar from "./findSimiliar.js";
+// import findSimiliar from "./findSimiliar.js";
+import findTaste from "./findTaste.js";
 import recipeAPI from "./helpers/recipeAPI.js";
 
 function findRecipes () {
@@ -7,7 +8,6 @@ function findRecipes () {
   recipe
     .then(response => response.json())
     .then(data => {
-      console.log(data.results)
       data = data.results
       return data
     })
@@ -18,7 +18,7 @@ function findRecipes () {
       }
       data.map((obj) => {
         const element = document.createElement("div")
-        element.addEventListener("click", findSimiliar)
+        element.addEventListener("click", findTaste)
         element.id = obj.id
         element.innerHTML = `<p> ${obj.title} </p> <img src=${obj.image}>`
         document.body.appendChild(element)
