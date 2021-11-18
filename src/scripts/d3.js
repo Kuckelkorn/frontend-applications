@@ -1,5 +1,9 @@
 import * as d3 from 'd3'
 
+///////////////
+// // BAR CHART
+///////////////
+
 const margin = {top: 40, bottom: 10, left: 120, right: 20}
 const width = 800 - margin.left - margin.right
 const height = 600 - margin.top - margin.bottom
@@ -43,5 +47,29 @@ function update(data){
     .attr('y', (data) => yScale(data.taste))
     .select('title').text((data) => `${data.value}`)
 }
+
+
+// /////////////
+// // DONUT CHART
+// /////////////
+
+// const margin = 10
+// const radius =250
+
+// const svg = d3.select('body main').append('svg')
+//   .attr('width', radius *2 + margin*2)
+//   .attr('height', radius *2 + margin*2)
+
+// const g = svg.append('g')
+//   .attr('transform', `translate(${radius+margin},${radius+margin})`)
+
+// function update (data){
+//   const pie = d3.pie().value((data) => data.flavour.length).sortValues(null).sort(null)
+//   const arc = d3.arc().outerRadius(radius).innerRadius(radius - 200)
+//   const cScale = d3.scaleOrdinal(d3.schemeSet2)
+
+//   const pied = pie(data)
+//   cScale.domain()
+// }
 
 export default update
