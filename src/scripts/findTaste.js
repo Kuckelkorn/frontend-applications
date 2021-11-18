@@ -19,26 +19,19 @@ function findTaste (recipeID) {
     })
 }
 
-function newObject(obj,id){
-  const data = {}
-  const flavour = []
-  if (flavour.length === 0){
-    for (const [key,value] of Object.entries(obj)) {
-      flavour.push({taste:key , value: value})
-    }
-    Object.assign(data, {id:id, flavour:flavour})
-    console.log(data)
-    return data
-  } else {
-    flavour = []
-    for (const [key,value] of Object.entries(obj)) {
-      flavour.push({taste:key , value: value})
-    }
-    Object.assign(data, {id:id, flavour:flavour})
-    console.log(data)
-    return data
-  }
+// rewrite the json data so that d3 can read it
 
+function newObject(obj,id){
+  // declare a new object
+  const data = {}
+  // empty array to push to
+  const flavour = []
+  // for every entry in the object create a new object in the array
+  for (const [key,value] of Object.entries(obj)) {
+    flavour.push({taste:key , value: value})
+  }
+  Object.assign(data, {id:id, flavour:flavour})
+  return data
 }
 
 export default findTaste
