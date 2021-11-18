@@ -1,6 +1,6 @@
 // import findSimiliar from "./findSimiliar.js";
-import findTaste from "./findTaste.js";
 import recipeAPI from "./helpers/recipeAPI.js";
+import createCard from "./helpers/render.js"
 
 function findRecipes () {
   const ingredient = document.querySelector("#ingredient").value
@@ -17,11 +17,7 @@ function findRecipes () {
         div[i].remove()
       }
       data.map((obj) => {
-        const element = document.createElement("div")
-        element.addEventListener("click", findTaste)
-        element.id = obj.id
-        element.innerHTML = `<p> ${obj.title} </p> <img src=${obj.image}>`
-        document.body.appendChild(element)
+        createCard(obj)
       })
     })
 }

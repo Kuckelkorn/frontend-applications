@@ -1,2 +1,5 @@
 /node_modules/
-/src/scripts/helpers/
+/src/scripts/helpers/recipeAPI.js
+/src/scripts/helpers/substituteAPI.js
+/src/scripts/helpers/tasteAPI.js
+/public/build/
