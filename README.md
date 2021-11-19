@@ -5,7 +5,7 @@ author: [Remco Kuckelkorn](https://github.com/Kuckelkorn)
 
 ## Summary
 
-For the course [Information Design](https://github.com/cmda-tt/course-21-22) the goal was to write functional javascript. To clean a `.json` file and receive information from an external API. During the first week we received a dataset with answers from a questionnaire to clean. In the second week I used a the API from [spoonacular](https://spoonacular.com/food-api).
+My wiki for frontend-data is a course taught at the HvA. The course is part of Information Design. The goal of this course is to get familiar with SVGs and in turn make data visualisations using the d3 library. The concept of my application is to make visualisations based on the spoonacular API. The spoonacular API has many endpoints that convey all kinds of information. My goal for these two weeks was to make a visualisation that displayed how a dish tastes.
 
 ## Tech used
 
@@ -51,7 +51,7 @@ To run the application run in your terminal this command
 npm run dev
 ```
 
-perform these code snippets in your terminal
+perform these last two code snippets in your terminal
 
 ## License
 
