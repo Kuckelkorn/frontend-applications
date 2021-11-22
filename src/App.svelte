@@ -1,8 +1,9 @@
 <script>
-  import findRecipes from "./scripts/findRecipe"
+  import Form from "./components/Form.svelte"
+  import RecipeList from "./components/RecipeList.svelte"
 </script>
 
 <main>
-  <input id="ingredient" type="text">
-  <button on:click={findRecipes}> Find recipe</button>
+  <Form/>
+  <RecipeList/>
 </main>
