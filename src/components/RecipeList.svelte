@@ -1,8 +1,14 @@
 <script>
-  import {RecipeStore} from '../stores'
+  import {RecipeStore} from '../stores/recipeStore'
   import Recipe from "./Recipe.svelte"
 </script>
 
-{#each $RecipeStore as dish (dish.id)}
-  <Recipe item={dish}/>
-{/each}
+<section>
+  <ul>
+    {#each $RecipeStore as dish (dish.id)}
+      <li>
+        <Recipe item={dish}/>
+      </li>
+    {/each}
+  </ul>
+</section>

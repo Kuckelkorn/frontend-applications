@@ -1,5 +1,5 @@
 <script>
-  import {RecipeStore} from '../stores'
+  import {RecipeStore} from '../stores/recipeStore'
   let ingredient = ''
 
   function findRecipes(){
@@ -21,7 +21,9 @@
   }
 </script>
 
-<form on:submit|preventDefault={findRecipes}>
-  <input bind:value={ingredient} id="ingredient" type="text" name="ingredient">
-  <button type="submit"> Find recipe</button>
-</form>
+<section>
+  <form on:submit|preventDefault={findRecipes}>
+    <input bind:value={ingredient} id="ingredient" type="text" name="ingredient">
+    <button type="submit"> Find recipe</button>
+  </form>
+</section>
