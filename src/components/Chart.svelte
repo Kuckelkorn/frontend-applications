@@ -6,9 +6,9 @@
   const width = 800 - margin.left - margin.right
   const height = 600 - margin.top - margin.bottom
 
-
   $: xScale = d3.scaleLinear().range([0, width]).domain([0, d3.max($TasteStore, (d) => d.value)])
   $: yScale = d3.scaleBand().range([0, height]).domain($TasteStore.map((d) => d.taste)).padding(0.1)
+
 </script>
 
 <svg {width} {height}>
