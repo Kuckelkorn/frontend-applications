@@ -35,8 +35,6 @@
 
 </script>
 
-<Dish>
-  <h2>{item.title}</h2>
-  <img src={item.image} alt={item.title}>
-  <button on:click={() => findTaste(item.id)}>Chart</button>
-</Dish>
+<h3>{item.title}</h3>
+<img src={item.image} alt={item.title}>
+<button on:click={() => findTaste(item.id)}>Add</button>

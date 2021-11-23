@@ -1,0 +1,19 @@
+@use '../helpers/variables';
+@use '../modules/form';
+@use '../modules/lists';
+
+
+section{
+  background-color: variables.$primary-color;
+  padding:1em;
+  margin:2em;
+  border-radius: 15px;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: show;
+}

@@ -1,0 +1,7 @@
+@use '../helpers/variables';
+@use '../modules/sections';
+
+main{
+  width: variables.$width;
+  margin: 2rem auto;
+}

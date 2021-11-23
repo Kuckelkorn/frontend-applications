@@ -1,0 +1,14 @@
+form{
+  display: flex;
+  justify-content: space-between;
+  input{
+    width: 70%;
+    margin: .5em;
+    height: 2em;
+  }
+  button{
+    width: 20%;
+    margin: .5em;
+    height: 2em;
+  }
+}

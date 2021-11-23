@@ -1,0 +1,6 @@
+@use '../helpers/variables';
+
+header{
+  width: variables.$width;
+  margin: 10px, auto
+}

@@ -1,0 +1,10 @@
+@use 'basic/reset';
+@use 'helpers/variables';
+
+@use 'layout/header';
+@use 'layout/main';
+
+
+body{
+  background-color: variables.$white;
+}
