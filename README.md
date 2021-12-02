@@ -1,7 +1,7 @@
 # Frontend Applications
 
 Frontend applications repository for Information Design tech track
-author: [Remco Kuckelkorn](https://github.com/Kuckelkorn)
+author: [Remco Kuckelkorn](https://github.com/Kuckelkorn). Working demo of the application [Link to demo](https://awesome-dubinsky-9e235e.netlify.app/)
 
 ## Summary
 
@@ -15,7 +15,7 @@ This application uses the Svelte framework, D3 library, Scss and dotenv.
 
 To use this application you can clone this repository. When in your root folder make a `.env` file and paste the following snippit in there with your own apiKey.
 
-```
+```javascript
 API_KEY=<YOUR API KEY>
 ```
 
